@@ -7,20 +7,16 @@ import Row from "../Row";
 function BrowseScreen() {
   return (
     <div className="browseScreen">
-       <Nav />
+      <Nav />
 
-      <Row 
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row title="Trending Now" fetchUrl={requests.fetchTrending} isLargeRow />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} isLargeRow />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} isLargeRow />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} isLargeRow />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} isLargeRow />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} isLargeRow />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} isLargeRow />         
+      <Row fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
+      <Row fetchUrl={requests.fetchTrending} isLargeRow />
+      <Row fetchUrl={requests.fetchTopRated} isLargeRow />
+      <Row fetchUrl={requests.fetchActionMovies} isLargeRow />
+      <Row fetchUrl={requests.fetchComedyMovies} isLargeRow />
+      <Row fetchUrl={requests.fetchHorrorMovies} isLargeRow />
+      <Row fetchUrl={requests.fetchRomanceMovies} isLargeRow />
+      <Row fetchUrl={requests.fetchDocumentaries} isLargeRow />         
     </div>
   )
 }

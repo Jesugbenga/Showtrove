@@ -9,7 +9,7 @@ function Banner() {
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(requests.fetchNetflixOriginals)
+            const request = await axios.get(requests.fetchTrending)
             setMovie(  /*Checks for a movie from the resulting set and outputs it */
                 request.data.results[
                     Math.floor(Math.random() *  request.data.results.length - 1)
@@ -39,11 +39,11 @@ function Banner() {
                 {movie?.title || movie?.name || movie?.original_name}
             </h1>
             <div className="banner__buttons">
-                <button className="banner__button">Play</button>
-                <button className="banner__button">My List</button>
+                <button className="banner__button"> + Add to Watchlist </button>
+                <button className="banner__button"> More information </button>
             </div>
             <h1 className="banner__description">
-                {truncate(movie?.overview, 150)}
+                {truncate(movie?.overview, 200)}
             </h1>
         </div>
 

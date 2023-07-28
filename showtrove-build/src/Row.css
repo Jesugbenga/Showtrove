@@ -17,14 +17,16 @@
 .row__poster {
     max-height: 100px;
     object-fit: contain;
-    margin-right: 10px;
+    margin-right: 20px;
     width: 100%;
+    border-radius: 15px; 
     transition: transform 450ms;
 }
 
 .row__poster:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
     opacity: 1;
+    box-shadow: 10px 10px rgb(0, 0, 0);
 }
 
 .row__posterLarge {
