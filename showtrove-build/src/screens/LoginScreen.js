@@ -25,7 +25,7 @@ function LoginScreen() {
         <div className="loginScreen__background">
             <img 
             className="loginScreen__logo"
-                src=""
+                src="showtrove-temp.png"
                 alt=""
             />
             <button onClick={() => setSignIn(true)}

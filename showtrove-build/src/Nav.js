@@ -25,14 +25,14 @@ function Nav() {
         <img
           onClick={() => navigate("/")}
           className="nav__logo"
-          src=""
+          src="C:\Users\jesuo\Git\Showtrove\showtrove-build\showtrove-build\src\showtrove-temp.png"
           alt=""
         />
 
         <img
           onClick={() => navigate("/profile")} 
           className="nav__avatar"
-          src=""
+          src="C:\Users\jesuo\Git\Showtrove\showtrove-build\showtrove-build\src\profile pic.png"
           alt=""
         />
       </div>
