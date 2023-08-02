@@ -9,9 +9,10 @@ function BrowseScreen() {
     <div className="browseScreen">
       <Nav />
 
-      <Row fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
+      
       <Row fetchUrl={requests.fetchTrending} isLargeRow />
       <Row fetchUrl={requests.fetchTopRated} isLargeRow />
+      <Row fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
       <Row fetchUrl={requests.fetchActionMovies} isLargeRow />
       <Row fetchUrl={requests.fetchComedyMovies} isLargeRow />
       <Row fetchUrl={requests.fetchHorrorMovies} isLargeRow />

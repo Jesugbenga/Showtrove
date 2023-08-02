@@ -15,7 +15,7 @@ function ProfileScreen() {
             <h1>Edit Profile</h1>
             <div className="profileScreen__info">
                 <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"  
+                    src=""  
                     alt="" 
                 />
                 <div className="profileScreen__details">
