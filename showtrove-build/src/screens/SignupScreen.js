@@ -3,7 +3,7 @@ import { auth } from "../firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"; // Import the functions from firebase/auth
 import "./SignupScreen.css";
 
-function SignupScreen() {
+function SignupScreen({ email }) { // Receive email as a prop
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
@@ -43,7 +43,7 @@ function SignupScreen() {
     <div className="signupScreen">
       <form>
         <h1>Sign In</h1>
-        <input ref={emailRef} placeholder="Email" type="email" />
+        <input ref={emailRef} placeholder="Email" type="email" defaultValue={email} />
         <input ref={passwordRef} placeholder="Password" type="password" />
         <button type="submit" onClick={signIn}>
           Sign In

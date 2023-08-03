@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./Nav.css";
+import pic from "./profile pic.png";
+import logo from "./showtrove-temp.png"
 
 function Nav() {
   const [show, handleShow] = useState(false);
@@ -25,14 +27,14 @@ function Nav() {
         <img
           onClick={() => navigate("/")}
           className="nav__logo"
-          src="C:\Users\jesuo\Git\Showtrove\showtrove-build\showtrove-build\src\showtrove-temp.png"
+          src={logo}
           alt=""
         />
 
         <img
           onClick={() => navigate("/profile")} 
           className="nav__avatar"
-          src="C:\Users\jesuo\Git\Showtrove\showtrove-build\showtrove-build\src\profile pic.png"
+          src={pic}
           alt=""
         />
       </div>

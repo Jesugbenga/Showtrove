@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./LoginScreen.css";
 import SignupScreen from "./SignupScreen";
+import logo from "../showtrove-temp.png";
 
 function LoginScreen() {
     const [signIn, setSignIn] = useState(false);
+    const [email, setEmail] = useState(""); // Add email state
 
     const [show, handleShow] = useState(false);
 
@@ -25,7 +27,7 @@ function LoginScreen() {
         <div className="loginScreen__background">
             <img 
             className="loginScreen__logo"
-                src="showtrove-temp.png"
+                src={logo}
                 alt=""
             />
             <button onClick={() => setSignIn(true)}
@@ -36,9 +38,10 @@ function LoginScreen() {
 
         <div className="loginScreen__body">  
             {signIn ? (
-                <SignupScreen />
+                <SignupScreen email={email} /> // Pass the email state as a prop
             ) : (
                 <>  
+                    <meta name="google-site-verification" content="tMaEOl1AbHRdbWzvbxjrBdK2c3ZgnKKlpOX8NdlYZgY" />
                     <h1> Your favourite shows, movies, TV programmes and more. </h1>
                     <h2> Login anywhere. Visit at any time. </h2>
                     <h3> Ready to explore? Enter your email to create or login to your profile. </h3>
@@ -46,10 +49,18 @@ function LoginScreen() {
 
                     <div className="loginScreen__input">
                         <form>
-                            <input type="email"
-                            placeholder="Email Address"/>
-                            <button onClick={() => setSignIn(true)}
-                            className="loginScreen__getStarted"> LET'S GET STARTED {">"} </button>
+                            <input 
+                                type="email"
+                                placeholder="Email Address"
+                                value={email} // Bind the email state to the input value
+                                onChange={(e) => setEmail(e.target.value)} // Update email state on input change
+                            />
+                            <button 
+                                onClick={() => {
+                                    setSignIn(true);
+                                  }}
+                                className="loginScreen__getStarted"> LET'S GET STARTED {">"} 
+                            </button>
                         </form>
                     </div>
 
