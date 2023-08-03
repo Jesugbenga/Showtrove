@@ -74,7 +74,7 @@ function LoginScreen() {
                                 </div>
                                 <img
                                 className="loginScreen__textImage"
-                                src="https://www.amazon.com/gp/video/static/sl/lp/xray/images/masthead-4-en.png"
+                                src="https://s3.eu-west-1.amazonaws.com/images.stv.cms.stv.tv/Multi_Devices_be64b6a968.png"
                                 alt=""
                                 />
                             </div>
@@ -98,7 +98,7 @@ function LoginScreen() {
                                 </div>
                                 <img
                                 className="loginScreen__textImage"
-                                src="https://cdn.dribbble.com/userupload/5186845/file/original-2499451b4e6bc3465bda8551676fa326.png?resize=752x"
+                                src="https://www.amazon.com/gp/video/static/sl/lp/xray/images/masthead-4-en.png"
                                 alt=""
                                 />
                             </div>

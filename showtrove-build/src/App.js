@@ -44,7 +44,7 @@ function App() {
             {/* Use the 'element' prop to render the components */}
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/" element={<HomeScreen />} />
-            <Route path="/page" element={<PageScreen />} />
+            <Route path="/page/:movieId" element={<PageScreen />} /> {/* Dynamic parameter */}
             <Route path="/browse" element={<BrowseScreen />} />
           </Routes>
         )}
