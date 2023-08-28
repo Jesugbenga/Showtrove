@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./LoginScreen.css";
 import SignupScreen from "./SignupScreen";
 import logo from "../showtrove-temp.png";
+import img1 from "../image 1.png";
+import img2 from "../image2.png";
+import img3 from "../image3.png";
 
 function LoginScreen() {
     const [signIn, setSignIn] = useState(false);
@@ -74,7 +77,7 @@ function LoginScreen() {
                                 </div>
                                 <img
                                 className="loginScreen__textImage"
-                                src="https://s3.eu-west-1.amazonaws.com/images.stv.cms.stv.tv/Multi_Devices_be64b6a968.png"
+                                src= {img1}
                                 alt=""
                                 />
                             </div>
@@ -86,7 +89,7 @@ function LoginScreen() {
                                 </div>
                                 <img
                                 className="loginScreen__textImage"
-                                src="https://uticatangerine.com/wp-content/uploads/2020/09/streaming.png"
+                                src= {img2}
                                 alt=""
                                 />
                             </div>
@@ -98,7 +101,7 @@ function LoginScreen() {
                                 </div>
                                 <img
                                 className="loginScreen__textImage"
-                                src="https://www.amazon.com/gp/video/static/sl/lp/xray/images/masthead-4-en.png"
+                                src= {img3}
                                 alt=""
                                 />
                             </div>

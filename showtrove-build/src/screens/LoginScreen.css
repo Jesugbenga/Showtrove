@@ -116,7 +116,7 @@
     color: #fff;
 
     @media (max-width :768px) {
-        width :80%; 
+        width :90%; 
         max-width :none; 
     }
 }
@@ -169,7 +169,7 @@
     padding: 50px 10%;
     color: white;
     overflow: hidden;
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,27 +184,40 @@
 }
 
 .loginScreen__textImage {
-    max-width: 200%;
-    width: 450px; 
-    height: 300px;
-    border-radius: 15px; 
+    max-width: 100%; /* Ensure the image scales down proportionally */
+    width: 450px;
+    border-radius: 15px;
     overflow: hidden;
 
     @media (max-width: 768px) {
-        width: 80%; 
-        height: auto; 
-        margin-right: 0; 
-        margin-top: 10px;
-        margin-bottom: 20px;
+        width: 80%; /* Adjust the image width on smaller screens */
+        margin: 10px auto; /* Center the image on smaller screens */
     }
 }
+
 
 .loginScreen__content {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Adjust as needed */
     margin-bottom: 80px;
-  }  
 
+    @media (max-width: 768px) {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: center; /* Adjust alignment for smaller screens */
+    }
+}
+
+.loginScreen__content > div {
+    flex: 1; /* Each column takes an equal portion of available space */
+    max-width: 33%; /* Set a fixed width for each column */
+    text-align: center; /* Center the content inside each column */
+
+    @media (max-width: 768px) {
+        max-width: 100%; /* Full width when stacked */
+        margin-bottom: 20px; /* Add margin between stacked columns */
+    }
+}
 
 /* Add separator lines between .loginScreen__content elements */
 .loginScreen__text::after {
@@ -217,8 +230,7 @@
   }
 
 .loginScreen__text {
-    margin-right: 200px;
-    max-width: 600px;
+    max-width: 100%;
     text-align: center;
     margin-bottom: 20px;
   }

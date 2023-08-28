@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "./axios";
 import "./Row.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState(null); // State to hold the selected movie
 
   const base_url = "https://image.tmdb.org/t/p/original/";
   
@@ -20,6 +21,11 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     fetchData();
   }, [fetchUrl]);
 
+  const handleMovieClick = (movie) => {
+    setSelectedMovie(movie); // Set the selected movie in state
+    navigate(`/page/${movie.id}`);
+  };
+
   return (
     <div className="row">
       <h2 className="title">{title}</h2>
@@ -30,7 +36,7 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
             ((isLargeRow && movie.poster_path) ||
               (!isLargeRow && movie.backdrop_path)) && (
               <img
-                onClick={() => navigate(`/page/${movie.id}`)}
+                //onClick={() =>  handleMovieClick(movie)} // Pass the clicked movie to the handler
                 className={`row__poster ${isLargeRow && "row__posterLarge"}`}
                 key={movie.id}
                 src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}

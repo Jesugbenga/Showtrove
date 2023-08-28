@@ -1,3 +1,4 @@
+/* Default styles for all screen sizes */
 .profileScreen {
     height: 100vh;
     color: white;
@@ -6,11 +7,11 @@
 .profileScreen__body {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     padding-top: 8%;
     max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .profileScreen__info {
@@ -24,7 +25,7 @@
 }
 
 .profileScreen__body > h1 {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 400;
     border-bottom: 1px solid #282c2d;
     margin-bottom: 20px;
@@ -32,21 +33,24 @@
 
 .profileScreen__details > h2 {
     background-color: gray;
-    padding: 15px;
-    font-size: 15px;
-    padding-left: 20px;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .profileScreen__signOut {
     padding: 10px 20px;
-    font-size: 1rem;
-    margin-top: 5%;
-    width: 100%;
+    font-size: 0.9rem;
+    margin-top: 10%;
     color: #fff;
     background-color: #FFD700;
     font-weight: 600;
     border: none;
     cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .profileScreen__plans {
@@ -60,4 +64,48 @@
 
 .profileScreen__info > img {
     height: 100px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .profileScreen__body {
+        padding-top: 25%;
+        align-items: center;
+    }
+
+    .profileScreen__info {
+        flex-direction: column; /* Stack content on smaller screens */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .profileScreen__details {
+        margin-left: 0; /* Remove margin on smaller screens */
+        margin-top: 15px; /* Add spacing between image and details */
+        text-align: center; /* Center text */
+    }
+
+    .profileScreen__body > h1 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+        margin-bottom: 10px; /* Reduce margin */
+    }
+
+    .profileScreen__details > h2 {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        margin-top: 10px; /* Reduce spacing */
+    }
+
+    .profileScreen__signOut {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+        margin-top: 10%; /* Adjust spacing */
+    }
+
+    .profileScreen__plans {
+        text-align: center; /* Center text */
+    }
+
+    .profileScreen__info > img {
+        height: 80px; /* Adjust image height */
+        margin-bottom: 10px; /* Add spacing between image and details */
+    }
 }
